@@ -124,8 +124,6 @@ const Map = () => {
         <Source
           type="geojson"
           data={GeoData}
-          // generateId={true}
-          // promoteId={true}
           cluster={true}
           clusterMaxZoom={14}
           clusterRadius={50}
