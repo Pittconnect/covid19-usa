@@ -1,6 +1,5 @@
 import React from "react";
 import Map from "./components/Map";
-// import Charts from "./components/charts/Charts";
 
 import "./app.scss";
 
@@ -11,8 +10,6 @@ function App() {
         <div className="covid-map">
           <Map />
         </div>
-
-        <div className="map-charts">{/* <Charts /> */}</div>
       </div>
     </div>
   );

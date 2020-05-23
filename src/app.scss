@@ -14,11 +14,11 @@
     max-width: 100%;
     vertical-align: middle;
 
-    .map-charts {
-      background-color: #22283180;
-      position: absolute;
-      top: 0;
-    }
+    // .map-charts {
+    //   background-color: #22283180;
+    //   position: absolute;
+    //   top: 0;
+    // }
 
     .map-container {
       .map-spinner {
@@ -38,16 +38,32 @@
         bottom: 5%;
       }
 
-      .popup-container {
-        color: #454545;
+      .mapboxgl-popup {
+        .mapboxgl-popup-tip {
+          border-color: transparent;
+          margin: 5px;
+        }
 
-        .chart-header {
-          font-size: 18px;
-          letter-spacing: 2px;
-          max-width: 250px;
-          font-weight: normal;
-          margin: auto;
-          text-align: center;
+        .mapboxgl-popup-content {
+          background-color: transparent;
+          box-shadow: unset;
+          padding: unset;
+
+          .popup-container {
+            color: #fff;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            
+            .chart-header {
+              background: rgba($color: #008080, $alpha: 0.6);
+              font-weight: 900;
+              font-size: 24px;
+              letter-spacing: 2px;
+              text-align: center;
+              max-width: 350px;
+              padding: 0 10px;
+              margin: auto;
+            }
+          }
         }
       }
     }
