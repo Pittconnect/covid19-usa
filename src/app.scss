@@ -14,12 +14,6 @@
     max-width: 100%;
     vertical-align: middle;
 
-    // .map-charts {
-    //   background-color: #22283180;
-    //   position: absolute;
-    //   top: 0;
-    // }
-
     .map-container {
       .map-spinner {
         display: flex;
@@ -46,8 +40,8 @@
 
         .mapboxgl-popup-content {
           background-color: transparent;
-          box-shadow: unset;
-          padding: unset;
+          box-shadow: none;
+          padding: 0px;
 
           .popup-container {
             color: #fff;
