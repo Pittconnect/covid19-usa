@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Text from "../charts/GroupedBar/Text";
 
 const getCoord = (containerWidth, elementWidth, index) => {
   const columnsCount = Math.trunc(containerWidth / elementWidth);
@@ -76,16 +77,15 @@ const RectLegend = ({
         x={x}
         y={y}
       />
-      <text
-        fill={"#fff"}
-        x={x + 2}
-        y={y + elementFontSize + 2}
-        fontSize={elementFontSize}
+      <Text
+        translateX={x + 2}
+        translateY={y + elementFontSize + 2}
         textAnchor={"start"}
-        alignmentBaseline={"baseline"}
-      >
-        {elementLabel}
-      </text>
+        dominantBaseline={"baseline"}
+        fill={"#fff"}
+        fontSize={elementFontSize}
+        text={elementLabel}
+      />
     </>
   );
 };

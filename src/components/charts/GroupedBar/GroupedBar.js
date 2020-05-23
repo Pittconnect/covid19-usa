@@ -73,9 +73,9 @@ const GroupedBar = ({
             {showPercentage && (
               <Text
                 translateX={_translateX(x(d) - 2)}
-                translateY={y(i) + y.bandwidth() / 2 + 4}
+                translateY={y(i) + y.bandwidth() / 2}
                 textAnchor={"end"}
-                alignmentBaseline={"baseline"}
+                dominantBaseline="middle"
                 fill={"#fff"}
                 fontSize={chartFontSize}
                 text={`${format((d * 100) / d3.max(data))}%`}
@@ -95,6 +95,8 @@ const GroupedBar = ({
               fill={legColorScale(d)}
               fontSize={15}
               fontColor={"#fff"}
+              textAnchor={"start"}
+              dominantBaseline="middle"
             />
           ))}
       </g>

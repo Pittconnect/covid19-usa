@@ -4,7 +4,7 @@ const Text = ({
   translateX,
   translateY,
   textAnchor,
-  alignmentBaseline,
+  dominantBaseline,
   fill,
   fontSize,
   text,
@@ -13,7 +13,7 @@ const Text = ({
     <text
       transform={`translate(${translateX}, ${translateY})`}
       textAnchor={textAnchor}
-      alignmentBaseline={alignmentBaseline}
+      dominantBaseline={dominantBaseline}
       fill={fill}
       fontSize={fontSize}
     >

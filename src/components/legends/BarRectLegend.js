@@ -1,5 +1,6 @@
 import React from "react";
 import Rect from "../charts/GroupedBar/Rect";
+import Text from "../charts/GroupedBar/Text";
 
 const RectLegend = ({
   data,
@@ -10,16 +11,21 @@ const RectLegend = ({
   fill,
   fontSize,
   fontColor,
+  textAnchor,
+  dominantBaseline,
 }) => {
   return (
     <>
       <Rect x={x} y={y} width={width} height={height} fill={fill} />
-      <text
-        x={x + 2}
-        y={y + fontSize + 4}
-        fontSize={fontSize}
+      <Text
+        translateX={x + 2}
+        translateY={y + fontSize}
+        textAnchor={textAnchor}
+        dominantBaseline={dominantBaseline}
         fill={fontColor}
-      >{`${data.key}: ${data.value}`}</text>
+        fontSize={fontSize}
+        text={`${data.key}: ${data.value}`}
+      />
     </>
   );
 };
